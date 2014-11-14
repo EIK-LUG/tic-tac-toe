@@ -1,7 +1,5 @@
 package ee.itcollege.lug.tic_tac_toe;
 
-import java.security.InvalidParameterException;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -9,12 +7,13 @@ import java.util.Scanner;
  */
 public class Player {
 
+    //Private to keep programmers from inadvertently accessing and changing these values.
     private static boolean firstPlayer = true;
     private enum mark {X, O}
     private mark playerMark;
 
     /**
-     * Character creation.
+     * Constructor method.
      */
     public Player() {
         if (firstPlayer) {
@@ -25,43 +24,34 @@ public class Player {
         }
     }
 
+    /**
+     * Lets the user choose a space.
+     */
     public Space chooseSpace() {
         return getUserInput();
     }
 
     /**
      * Deals with getting proper user input.
-     *
-     * @return The user selected Space.
      */
     private Space getUserInput() {
         Scanner sc = new Scanner(System.in);
 
-        while (true) {
-            try {
-                System.out.println("Player " + playerMark);
-                System.out.println("Where do you want to make your play? (i, j)");
+        System.out.println("Player " + playerMark);
+        System.out.println("Where do you want to make your play?");
 
-                int i = sc.nextInt();
-                int j = sc.nextInt();
+        System.out.print("Row: ");
+        int i = sc.nextInt();
+        System.out.print("Column: ");
+        int j = sc.nextInt();
 
-                try {
-                    return new Space(i, j);
-                } catch(InvalidParameterException e) {
-                    System.out.println("Sorry, this move is illegal..");
-                    sc.nextLine();
-                }
-
-            } catch (InputMismatchException e) {
-                System.out.println("Sorry, invalid input type. Try again.");
-                sc.nextLine();
-            }
-        }
+        return new Space(i, j);
     }
 
     /**
-     * To string.
+     * Overriding objects toString method. This is what every objects calls with System.out.println(Object);
      */
+    @Override
     public String toString() {
         return "[" + String.valueOf(playerMark) + "]";
     }

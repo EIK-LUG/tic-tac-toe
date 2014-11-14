@@ -2,6 +2,9 @@ package ee.itcollege.lug.tic_tac_toe;
 
 import java.security.InvalidParameterException;
 
+/**
+ * A simple exception, only for detecting a certain error.
+ */
 class SpaceNotAvailableException extends Exception {
 
 }
@@ -11,15 +14,13 @@ class SpaceNotAvailableException extends Exception {
  */
 public class Space {
 
-    /* To keep anyone from changing these values directly. */
+    /* Private to keep anyone from changing these values directly. */
     private boolean taken = false;
     private int position[] = {0, 0};
     public Player owner;
 
     /**
      * Constructor method.
-     *  @param x X coordinate.
-     * @param y Y coordinate.
      */
     public Space(int x, int y) {
         try {
@@ -42,10 +43,8 @@ public class Space {
 
     /**
      * Take this space.
-     *
-     * @param player The player that will take this space.
      */
-    public void takeSpace(Player player) throws Exception {
+    public void takeSpace(Player player) throws SpaceNotAvailableException {
         if (!taken) {
             owner = player;
             taken = true;
@@ -62,10 +61,7 @@ public class Space {
     }
 
     /**
-     * Defines equality operations behaviour.
-     *
-     * @param other any other object.
-     * @return Is it equal.
+     * Overriding objects equals method. Defines equality operations behaviour for all Objects.
      */
     @Override
     public boolean equals(Object other) {
@@ -78,10 +74,9 @@ public class Space {
     }
 
     /**
-     *
-     *
-     * @return Representation of
+     * Overriding objects toString method. This is what every objects calls with System.out.println(Object);
      */
+    @Override
     public String toString() {
         try {
             return owner.toString();

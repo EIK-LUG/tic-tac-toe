@@ -24,23 +24,13 @@ public class Grid {
 
     /**
      * A space is marked by a player.
-     *
-     * @param player A player.
      */
-    public void markSpace(Player player, Space space) {
-        try {
-            findSpace(space).takeSpace(player);
-        } catch (NoSuchElementException e) {
-            System.out.println("Invalid space.");
-            throw new NoSuchElementException();
-        } catch (SpaceNotAvailableException) {
-            System.out.println("");
-            throw new
-        }
+    public void markSpace(Player player, Space space) throws SpaceNotAvailableException {
+        findSpace(space).takeSpace(player);
     }
 
     /**
-     *  Find space in this grid.
+     *  Find space in this grid. If this space does not exist, throw exception.
      */
     private Space findSpace(Space space) {
         for (ArrayList<Space> al : representation) {
@@ -52,10 +42,10 @@ public class Grid {
     }
 
     /**
-     * @return A string representation of this Grid.
+     * Returns a string representation of this Grid.
      */
     public String toString() {
-        String rep = "";
+        String rep = "\n";
 
         for (ArrayList<Space> al : representation) {
             for (Space spc : al) {
@@ -68,17 +58,9 @@ public class Grid {
     }
 
     /**
-     *
-     *
-     * @param chosenSpace
-     * @return
+     * Returns whether this space is free.
      */
     public boolean isSpaceFree(Space chosenSpace) {
-        if (!findSpace(chosenSpace).isNotTaken()) {
-            System.out.println("This space is already taken!");
-            return true;
-        } else {
-            return false;
-        }
+        return findSpace(chosenSpace).isNotTaken();
     }
 }
