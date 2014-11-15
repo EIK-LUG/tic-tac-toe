@@ -30,8 +30,6 @@ public class Space {
         } catch (AssertionError e) {
             throw new InvalidParameterException();
         }
-
-
     }
 
     /**
