@@ -1,4 +1,6 @@
-package ee.itcollege.lug.tic_tac_toe;
+package ee.itcollege.lug.tic_tac_toe.player;
+
+import ee.itcollege.lug.tic_tac_toe.playing_field.Space;
 
 import java.util.Scanner;
 

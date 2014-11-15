@@ -1,13 +1,8 @@
-package ee.itcollege.lug.tic_tac_toe;
+package ee.itcollege.lug.tic_tac_toe.playing_field;
+
+import ee.itcollege.lug.tic_tac_toe.player.Player;
 
 import java.security.InvalidParameterException;
-
-/**
- * A simple exception, only for detecting a certain error.
- */
-class SpaceNotAvailableException extends Exception {
-
-}
 
 /**
  * A space on the grid.

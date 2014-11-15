@@ -1,5 +1,10 @@
 package ee.itcollege.lug.tic_tac_toe;
 
+import ee.itcollege.lug.tic_tac_toe.game.Game;
+import ee.itcollege.lug.tic_tac_toe.player.Player;
+import ee.itcollege.lug.tic_tac_toe.playing_field.Grid;
+import ee.itcollege.lug.tic_tac_toe.playing_field.SpaceNotAvailableException;
+
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 

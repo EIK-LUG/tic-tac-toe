@@ -1,4 +1,6 @@
-package ee.itcollege.lug.tic_tac_toe;
+package ee.itcollege.lug.tic_tac_toe.playing_field;
+
+import ee.itcollege.lug.tic_tac_toe.player.Player;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;

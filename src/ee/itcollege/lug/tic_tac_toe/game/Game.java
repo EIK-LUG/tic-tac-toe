@@ -1,4 +1,9 @@
-package ee.itcollege.lug.tic_tac_toe;
+package ee.itcollege.lug.tic_tac_toe.game;
+
+import ee.itcollege.lug.tic_tac_toe.playing_field.Grid;
+import ee.itcollege.lug.tic_tac_toe.player.Player;
+import ee.itcollege.lug.tic_tac_toe.playing_field.Space;
+import ee.itcollege.lug.tic_tac_toe.playing_field.SpaceNotAvailableException;
 
 import java.util.ArrayList;
 
@@ -26,7 +31,7 @@ public class Game {
      * Does what is necessary for next move.
      */
     public void nextMove(int turnNr) throws SpaceNotAvailableException {
-        if (turnNr == 8) {
+        if (turnNr == 9) {
             isGameOver = true;
         }
         int index;
