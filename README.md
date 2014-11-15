@@ -7,3 +7,5 @@ This repository currently contains a simple tic-tac-toe game. The game is missin
 
 The tic-tac-toe game does NOT use inheritance(explicitly) , interfaces, abstract classes or any of that fancy stuff. It is simply made of classes (components) that make a whole by being used in a certain way. 
 
+Do not quote me, but I think the tic tac toe game would maybe be a solid 4 mark for the Java semester work. :)
+
