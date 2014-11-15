@@ -3,8 +3,6 @@ OOP
 
 A repository of code to help understand OOP. Run either of the Main.main() methods in either folder structure to try out the programs.
 
-Note: The jtodo will need the full path at the \\ToDo Search for files todo tag. (Locate by IDE ToDo viewer). It might still not work. :)
-
 tic tac toe
 ===========
 
@@ -19,3 +17,11 @@ jtodo
 
 My (Kristo) personal java semester work from last year. Oh boy... . This homework was graded 30/30 (by Mart Mangus) after 20 seconds. Although looking at it now is painfull. There are places that are marked ToDo and that is fine, but I will maybe speak about what is wrong in some places at the next .hack meet.
 
+NOTES
+=====
+
+The jtodo will need the full path at the ToDo Search for files todo tag. (Locate by IDE ToDo viewer). It might still not work, because It was a complete throw away demo and I haven't tested it yet. :)
+
+I used the IntelliJ IDE for this, Eclipse might flip out, screaming random errors about invalid file structure. If it does, let me know.(kristo.koert@gmail.com)
+
+I would however suggest IntelliJ for Java development, because of its more focused and reliable nature. (+ alt-enter is no joke in IntelliJ) https://www.jetbrains.com/idea/
