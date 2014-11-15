@@ -3,4 +3,7 @@ OOP
 
 A repository of code to help understand OOP.
 
-This repository is in the works. For those already checking it out, be warned that the code is not very trivial. There is much code yet to be added and at one point a guide will also be created for traversing the code.
+This repository currently contains a simple tic-tac-toe game. The game is missing a single piece before it is complete, the detection of a win state of the grid. (For everyone to figure out for themselves, will also do at the .hack meet)
+
+The tic-tac-toe game does NOT use inheritance(explicitly) , interfaces, abstract classes or any of that fancy stuff. It is simply made of classes (components) that make a whole by being used in a certain way. 
+
