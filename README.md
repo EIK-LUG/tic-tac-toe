@@ -1,7 +1,9 @@
 OOP
 ===
 
-A repository of code to help understand OOP.
+A repository of code to help understand OOP. Run either of the Main.main() methods in either folder structure to try out the programs.
+
+Note: The jtodo will need the full path at the \\ToDo Search for files todo tag. (Locate by IDE ToDo viewer). It might still not work. :)
 
 tic tac toe
 ===========
