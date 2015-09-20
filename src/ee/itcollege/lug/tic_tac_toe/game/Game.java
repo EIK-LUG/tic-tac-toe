@@ -30,7 +30,7 @@ public class Game {
      * Does what is necessary for next move.
      */
     public void nextMove(int turnNr) throws SpaceNotAvailableException {
-        if (turnNr == 9) {
+        if (turnNr == 8) {
             isGameOver = true;
         }
         Player currentPlayer;
