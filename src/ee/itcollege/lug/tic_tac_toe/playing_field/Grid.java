@@ -10,16 +10,16 @@ import java.util.NoSuchElementException;
  */
 public class Grid {
 
-    ArrayList<ArrayList<Space>> representation = new ArrayList<ArrayList<Space>>();
+    Space[][] representation = new Space[3][3];
 
     /**
      * On creation make a matrix of Space object instances.
      */
     public Grid() {
         for (int i = 0; i < 3; i++) {
-            representation.add(new ArrayList<Space>());
+            representation[i] = new Space[3];
             for (int j = 0; j < 3; j++) {
-                representation.get(i).add(new Space(i, j));
+                representation[i][j] = new Space(i, j);
             }
         }
     }
@@ -35,7 +35,7 @@ public class Grid {
      *  Find space in this grid. If this space does not exist, throw exception.
      */
     private Space findSpace(Space space) {
-        for (ArrayList<Space> al : representation) {
+        for (Space[] al : representation) {
             for (Space spc : al) {
                 if (space.equals(spc)) return spc;
             }
@@ -49,7 +49,7 @@ public class Grid {
     public String toString() {
         String rep = "\n";
 
-        for (ArrayList<Space> al : representation) {
+        for (Space[] al : representation) {
             for (Space spc : al) {
                 rep += spc.toString();
             }
