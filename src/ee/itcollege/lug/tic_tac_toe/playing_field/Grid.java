@@ -57,7 +57,7 @@ public class Grid {
 
         return rep;
     }
-    
+
     /**
      * Not used, will probably be useful for checking win.
      */

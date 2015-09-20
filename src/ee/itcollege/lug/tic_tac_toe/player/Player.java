@@ -47,7 +47,7 @@ public class Player {
         System.out.print("Column: ");
         int j = sc.nextInt();
 
-        return new Space(i, j);
+        return new Space(i-1, j-1);
     }
 
     /**
