@@ -5,8 +5,6 @@ import ee.itcollege.lug.tic_tac_toe.player.Player;
 import ee.itcollege.lug.tic_tac_toe.playing_field.Space;
 import ee.itcollege.lug.tic_tac_toe.playing_field.SpaceNotAvailableException;
 
-import java.util.ArrayList;
-
 /**
  * The logic of a single game.
  */
@@ -15,15 +13,16 @@ public class Game {
     /*Because there is no reason to show these variable outside this class
      and changing them can break the game, they are private. */
     private boolean isGameOver = false;
-    private ArrayList<Player> players = new ArrayList<Player>();
+    private Player player1;
+    private Player player2;
     private Grid grid;
 
     /**
      * Constructor method.
      */
     public Game(Player player1, Player player2, Grid grid) {
-        this.players.add(player1);
-        this.players.add(player2);
+        this.player1 = player1;
+        this.player2 = player2;
         this.grid = grid;
     }
 
@@ -34,15 +33,14 @@ public class Game {
         if (turnNr == 9) {
             isGameOver = true;
         }
-        int index;
+        Player currentPlayer;
         if (turnNr % 2 == 0) {
-            index = 1;
+            currentPlayer = this.player2;
         } else {
-            index = 0;
+            currentPlayer = this.player1;
         }
-        Player player = players.get(index);
-        Space chosenSpace = player.chooseSpace();
-        grid.markSpace(player, chosenSpace);
+        Space chosenSpace = currentPlayer.chooseSpace();
+        grid.markSpace(currentPlayer, chosenSpace);
     }
 
     /**
