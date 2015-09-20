@@ -59,10 +59,4 @@ public class Grid {
         return rep;
     }
 
-    /**
-     * Returns whether this space is free.
-     */
-    public boolean isSpaceFree(Space chosenSpace) {
-        return findSpace(chosenSpace).isNotTaken();
-    }
 }
