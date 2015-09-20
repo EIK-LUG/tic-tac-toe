@@ -10,7 +10,6 @@ import java.util.NoSuchElementException;
  */
 public class Grid {
 
-    //ArrayList<ArrayList<Space>> representation = new ArrayList<ArrayList<Space>>();
     Space[][] representation = new Space[3][3];
 
     /**

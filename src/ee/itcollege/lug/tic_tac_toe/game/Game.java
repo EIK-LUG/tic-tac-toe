@@ -32,7 +32,7 @@ public class Game {
      * Does what is necessary for next move.
      */
     public void nextMove(int turnNr) throws SpaceNotAvailableException {
-        if (turnNr == 9) {
+        if (turnNr == 8) {
             isGameOver = true;
         }
         int index;
@@ -52,7 +52,7 @@ public class Game {
     public boolean isOver() {
         return isGameOver;
     }
-
+    //TODO if checkForWin == true then return isGameOver=true; , end game & sout winner name
     /**
      * Check if someone has won the game.
      */
