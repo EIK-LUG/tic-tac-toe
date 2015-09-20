@@ -15,15 +15,16 @@ public class Game {
     /*Because there is no reason to show these variable outside this class
      and changing them can break the game, they are private. */
     private boolean isGameOver = false;
-    private ArrayList<Player> players = new ArrayList<Player>();
+    private Player[] players = new Player[2];
     private Grid grid;
+
 
     /**
      * Constructor method.
      */
     public Game(Player player1, Player player2, Grid grid) {
-        this.players.add(player1);
-        this.players.add(player2);
+        this.players[0] = player1;
+        this.players[1] = player2;
         this.grid = grid;
     }
 
@@ -40,7 +41,7 @@ public class Game {
         } else {
             index = 0;
         }
-        Player player = players.get(index);
+        Player player = players[index];
         Space chosenSpace = player.chooseSpace();
         grid.markSpace(player, chosenSpace);
     }
