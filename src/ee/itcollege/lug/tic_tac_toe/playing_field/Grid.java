@@ -2,7 +2,6 @@ package ee.itcollege.lug.tic_tac_toe.playing_field;
 
 import ee.itcollege.lug.tic_tac_toe.player.Player;
 
-import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 /**
@@ -10,7 +9,7 @@ import java.util.NoSuchElementException;
  */
 public class Grid {
 
-    Space[][] representation = new Space[3][3];
+    private Space[][] representation = new Space[3][3];
 
     /**
      * On creation make a matrix of Space object instances.
@@ -57,6 +56,13 @@ public class Grid {
         }
 
         return rep;
+    }
+    
+    /**
+     * Not used, will probably be useful for checking win.
+     */
+    public Space[][] getRepresentation() {
+        return this.representation;
     }
 
 }
